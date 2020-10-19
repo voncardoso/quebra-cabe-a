@@ -8,13 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Login.unity
     guid: 0d28daa2beb3be44d82e5dc22de92361
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Register.unity
     guid: ae05c4ec169a892438f1f8005ecf5c84
   - enabled: 1
+    path: Assets/Scenes/Jogar-2.unity
+    guid: 7a22d1dc85312ba4380d8cec8e33fc96
+  - enabled: 1
     path: Assets/Scenes/Jogar.unity
     guid: 5c1db9170ac1bde40916eacce851fceb
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 2196f389c1781804f80b95bc67199962
+  - enabled: 1
+    path: Assets/Scenes/Jogar-3.unity
+    guid: 9d8eca825fabcfe4fb89f92418c4046c
   m_configObjects: {}

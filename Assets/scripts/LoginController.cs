@@ -45,7 +45,7 @@ public class LoginController : MonoBehaviour
 
   IEnumerator EviarRequisicao()
   {
-    string endPoint = "localhost:3333/api/v1";
+    string endPoint = "https://unity-game-api.herokuapp.com/api/v1";
     string email = userFielde.text;
     string password = senhaFielde.text;
 
@@ -76,13 +76,13 @@ public class LoginController : MonoBehaviour
 
   IEnumerator CarregaScene()
   {
-    SceneManager.LoadScene("Inicial");
+    SceneManager.LoadScene("Menu");
     yield return 0;
   }
 
   IEnumerator CarregaJogo()
   {
-    SceneManager.LoadScene("Jogar");
+    SceneManager.LoadScene("Menu");
     yield return 0;
   }
 
