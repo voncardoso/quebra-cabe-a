@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0884c887f5839da428e3911682e1870f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sourceTexture: {fileID: 2800000, guid: c1945ed3ca66cbe4d9474e26cdd58192, type: 3}
+  sourceTexture: {fileID: 2800000, guid: 5ae87e2cb4581454b96bfacfcefaa780, type: 3}
   piecePrefab: {fileID: 8630444973384671324, guid: 3ca7afc57b5bae4448cb3ffac335a092,
     type: 3}
   gridPrefab: {fileID: 1209772100890156381, guid: 419880514836f6e478d3da443b3325a1,
@@ -480,7 +480,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934141912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.19693828, y: -1.2216074, z: 81.16016}
+  m_LocalPosition: {x: 1.850024, y: -2.709998, z: -11.66886}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

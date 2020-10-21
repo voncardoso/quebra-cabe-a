@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
                 currentScore = 0;
                 level = level + 1;
                 print(level);
+                Timer.estopTime = true;
                 StartCoroutine(ButtonLevel());
             }        
             break;
