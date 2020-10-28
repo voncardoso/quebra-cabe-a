@@ -21,6 +21,7 @@ public class CropTextures : MonoBehaviour
     private int  GridType;
     public Texture2D sourceTexture;
     public GameObject piecePrefab, gridPrefab;
+	public UnityEngine.UI.Image img;
 
     private int amountPieces;
     private List<Vector2> positions = new List<Vector2>();
@@ -31,7 +32,6 @@ public class CropTextures : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-	//	OnGUI();
         StartComponents ();
 		CreatePositions ();
 		CreatePiece ();
@@ -43,7 +43,7 @@ public class CropTextures : MonoBehaviour
 
     void StartComponents(){
 		GameManager.currentScore = 0;
-       // amountPieces = (int)GridType;
+        img.sprite = Sprite.Create (sourceTexture, new Rect (0, 0, sourceTexture.width, sourceTexture.height), new Vector2 (0.5f, 0.5f));
 	  	GridType = Menu1.numeroPecas;
 	   	amountPieces = GridType;
 		resolutionPieces = new Vector2 (sourceTexture.width / amountPieces, sourceTexture.height / amountPieces);
@@ -74,6 +74,7 @@ public class CropTextures : MonoBehaviour
 	}
 
     	void CreatePiece(){
+			
 		var start = amountPieces - 1;
 		for (int i = start; i >= 0; i--) {
 			for (int j = 0; j < amountPieces; j++){

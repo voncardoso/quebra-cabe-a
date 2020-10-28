@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
                 text.text = "Parabens vc ganhou";
                 currentScore = 0;
                 level = level + 1;
+                Timer.estopTime = true;
                 StartCoroutine(ButtonLevel_1());
             }        
             break;

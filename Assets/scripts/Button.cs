@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ButtoScript : MonoBehaviour
+public class Button : MonoBehaviour
 {
     // Start is called before the first frame update
 	public Image img;
@@ -16,9 +16,5 @@ public class ButtoScript : MonoBehaviour
 			img.gameObject.SetActive (true);
 		else 
 			img.gameObject.SetActive (false);
-	}
-	
-	public void RestartLevel(){
-		Application.LoadLevel (0);
 	}
 }

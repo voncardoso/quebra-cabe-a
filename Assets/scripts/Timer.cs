@@ -6,17 +6,25 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-   // private string nomeCena;
-   // public Text bestTime;
+    //variavel irá receber o nome da cena
+    private string nomeCena;
+    // recebe o tempo no formato de texto
     public Text timeLevel_txt;
+    // conta o tempo
     private float timeLevel;
+    // vai manda o tempo para banco
+    private static string timeLevel_banco;
+
     public static bool estopTime;
-    // Start is called before the first frame update
+    
     void Start()
     {
         estopTime = false;
 
-        //nomeCena = SceneManager.GetActiveScene().jogar;
+        nomeCena = SceneManager.GetActiveScene().name;
+        print(nomeCena);
+        Update();
+        
     }
 
     // Update is called once per frame
@@ -24,7 +32,23 @@ public class Timer : MonoBehaviour
     {
         if (estopTime == false){
             timeLevel = timeLevel + Time.deltaTime;
-            timeLevel_txt.text = timeLevel.ToString("F2");
+            timeLevel_txt.text = timeLevel.ToString("F0");    
+            timeLevel_banco = timeLevel_txt.text;
+            print("timer banco " + timeLevel_banco);
         }
+        TimerLevelCena (timeLevel_banco);
+        
     }
+
+    void TimerLevelCena (string X){
+        print("aqui");
+            if(nomeCena == "Jogar"){
+                print("timer banco final" + timeLevel_banco);
+            }
+            if(nomeCena == "Jogar-2"){
+                timeLevel_banco = timeLevel_txt.text;
+                print("timer banco" + timeLevel_banco);
+            }      
+    }
+
 }
