@@ -15,14 +15,6 @@ public class GameManager : MonoBehaviour
         
          print(currentScore);
          print("valor level" + level);
-        //print(scoreTotal);
-     //   if (currentScore == scoreTotal){
-       //  print(currentScore);
-       //  print(scoreTotal);
-       //     print("Parabens");
-        //    text.text = "Parabens";
-      //      StartCoroutine(ButtonLevel());
-       // }
 
        switch (level)
        {
@@ -48,7 +40,7 @@ public class GameManager : MonoBehaviour
                 currentScore = 0;
                 level = level + 1;
                 Timer.estopTime = true;
-                StartCoroutine(ButtonLevel_1());
+                StartCoroutine(ButtonLevel_2());
             }        
             break;
         case 2:
