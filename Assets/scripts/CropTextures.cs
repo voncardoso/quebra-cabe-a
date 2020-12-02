@@ -6,20 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class CropTextures : MonoBehaviour
 {
-    public enum Options {
-        Grid2X2 = 2,
-		Grid3X3 = 3,
-		Grid4X4 = 4,
-		Grid5X5 = 5,
-		Grid6X6 = 6,
-		Grid7X7 = 7,
-		Grid8X8 = 8,
-		Grid9X9 = 9
-    };
+  //  public enum Options {
+    //    Grid2X2 = 2,
+	//	Grid3X3 = 3,
+	//	Grid4X4 = 4,
+	//	Grid5X5 = 5,
+	//	Grid6X6 = 6,
+	//	Grid7X7 = 7,
+	//	Grid8X8 = 8,
+	//	Grid9X9 = 9
+   // };
 
-    public Options GridType;
-    public Texture2D sourceTexture, img;
+   // public Options GridType;
+    private int  GridType;
+    public Texture2D sourceTexture;
     public GameObject piecePrefab, gridPrefab;
+	public UnityEngine.UI.Image img;
 
     private int amountPieces;
     private List<Vector2> positions = new List<Vector2>();
@@ -30,7 +32,6 @@ public class CropTextures : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-	//	OnGUI();
         StartComponents ();
 		CreatePositions ();
 		CreatePiece ();
@@ -41,10 +42,13 @@ public class CropTextures : MonoBehaviour
 	}
 
     void StartComponents(){
-        amountPieces = (int)GridType;
-		resolutionPieces = new Vector2 (sourceTexture.width / amountPieces, sourceTexture.height / amountPieces);
 		GameManager.currentScore = 0;
+        img.sprite = Sprite.Create (sourceTexture, new Rect (0, 0, sourceTexture.width, sourceTexture.height), new Vector2 (0.5f, 0.5f));
+	  	GridType = Menu1.numeroPecas;
+	   	amountPieces = GridType;
+		resolutionPieces = new Vector2 (sourceTexture.width / amountPieces, sourceTexture.height / amountPieces);
     	GameManager.scoreTotal = amountPieces * amountPieces;
+		
 		
     }
 	 // mantem od grids juntos
@@ -70,6 +74,7 @@ public class CropTextures : MonoBehaviour
 	}
 
     	void CreatePiece(){
+			
 		var start = amountPieces - 1;
 		for (int i = start; i >= 0; i--) {
 			for (int j = 0; j < amountPieces; j++){
