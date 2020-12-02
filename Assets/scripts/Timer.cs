@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
     //variavel irá receber o nome da cena
     private string nomeCena;
     // recebe o tempo no formato de texto
-    private Text timeLevel_txt;
+    public Text timeLevel_txt;
     // conta o tempo
     private float timeLevel;
     // vai manda o tempo para banco
