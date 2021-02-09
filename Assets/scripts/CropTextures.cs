@@ -19,7 +19,7 @@ public class CropTextures : MonoBehaviour
 
    // public Options GridType;
     private int  GridType;
-    public Texture2D sourceTexture;
+    public Texture2D sourceTexture; 
     public GameObject piecePrefab, gridPrefab;
 	public UnityEngine.UI.Image img;
 
@@ -73,8 +73,7 @@ public class CropTextures : MonoBehaviour
 		return pos;
 	}
 
-    	void CreatePiece(){
-			
+    	void CreatePiece(){	
 		var start = amountPieces - 1;
 		for (int i = start; i >= 0; i--) {
 			for (int j = 0; j < amountPieces; j++){
