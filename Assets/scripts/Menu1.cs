@@ -16,7 +16,7 @@ public class Menu1 : MonoBehaviour
 		Grid6X6,
 		Grid7X7,
 		Grid8X8,
-		Grid9X9 
+		Grid9X9,
     };
     
     public Dropdown dropdown;
